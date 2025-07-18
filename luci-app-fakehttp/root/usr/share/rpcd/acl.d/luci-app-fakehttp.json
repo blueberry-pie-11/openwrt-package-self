@@ -1,0 +1,11 @@
+{
+  "luci-app-fakehttp": {
+    "description": "Grant UCI and RPC access to LuCI app fakehttp",
+    "read": {
+      "uci": ["fakehttp"]
+    },
+    "write": {
+      "uci": ["fakehttp"]
+    }
+  }
+}
