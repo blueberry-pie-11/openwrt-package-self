@@ -1,6 +1,6 @@
 {
   "admin/services/fakesip": {
-    "title": "Fakesip",
+    "title": "FakeSIP",
     "order": 60,
     "action": {
       "type": "view",
