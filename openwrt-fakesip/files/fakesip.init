@@ -4,8 +4,8 @@ USE_PROCD=1
 START=99
 STOP=01
 
-PROG="/usr/sbin/fakehttp"
-NAME="fakehttp"
+PROG="/usr/sbin/fakesip"
+NAME="fakesip"
 
 service_triggers() {
     procd_add_reload_trigger "${NAME}"
@@ -72,7 +72,7 @@ add_advanced() {
     test_bool_then_append "advanced" "use_iptables" "-z"
 }
 
-fakehttp_instance() {
+fakesip_instance() {
     config_load "${NAME}"
 
     local enabled
@@ -94,7 +94,7 @@ fakehttp_instance() {
 }
 
 start_service() {
-    fakehttp_instance
+    fakesip_instance
 }
 
 reload_service() {
