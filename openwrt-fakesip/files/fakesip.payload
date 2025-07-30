@@ -1,7 +1,7 @@
-INVITE sip:homesa@example.net SIP/2.0
+INVITE sip:homesa@sip.qqmra.com SIP/2.0
 Via: SIP/2.0/UDP 192.168.2.50:5060;branch=z9hG4bK-scsfwx-call-001
 Max-Forwards: 70
-To: <sip:homesa@example.net>
+To: <sip:homesa@sip.qqmra.com>
 From: <sip:scsfwx@sip.qqmra.com>;tag=scsfwx-tag-123
 Call-ID: call-scsfwx-to-homesa-9876@192.168.2.50
 CSeq: 1 INVITE
