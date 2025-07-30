@@ -1,0 +1,11 @@
+{
+  "luci-app-fakesip": {
+    "description": "Grant UCI and RPC access to LuCI app fakesip",
+    "read": {
+      "uci": ["fakesip"]
+    },
+    "write": {
+      "uci": ["fakesip"]
+    }
+  }
+}
