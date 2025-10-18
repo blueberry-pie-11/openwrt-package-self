@@ -246,6 +246,17 @@ select[multiple="multiple"] {
   }
 }
 
+.modal.alert-message {
+  position: static;
+  width: 90%;
+  min-width: 270px;
+  max-width: 600px;
+  left: auto;
+  top: auto;
+  transform: none;
+  margin: 5em auto;
+}
+
 .alert-message>h4 {
   font-size: 110%;
   font-weight: bold;
@@ -264,8 +275,11 @@ select[multiple="multiple"] {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0rem;
+  position: relative;
+  top: 0;
+  transform:translate(-50%, 0);
+  width: 100%;
 }
-
 
 .lg {
   margin: 0;
@@ -1653,7 +1667,7 @@ body:not(.Interfaces) .cbi-rowstyle-2:first-child {
     padding: 0.5rem;
     cursor: auto;
     white-space: pre-wrap;
-    color: var(--gray-dark);
+    color: var(--dark-primary);
     outline: 0;
     border-radius: 0.25rem;
     border: 1px solid var(--lighter);
