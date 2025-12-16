@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if [ ! -f /etc/config/easymesh ]; then
+    echo "Creating /etc/config/easymesh"
+    cat <<EOF > /etc/config/easymesh
+config easymesh 'config'
+        option enabled '0'
+EOF
+	reload_config
+else
+	echo "/etc/config/easymesh exists, skipping creation"
+fi
+
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.@easymesh[-1]
+	add ucitrack easymesh
+	set ucitrack.@easymesh[-1].init=easymesh
+	commit ucitrack
+EOF
+
+rm -f /tmp/luci-indexcache
+exit 0
